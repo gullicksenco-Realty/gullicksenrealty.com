@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gullicksen Realty — Service Dashboard</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f5f5f5; color: #333; padding: 20px; }
+        h1 { color: #00235A; text-align: center; margin-bottom: 5px; font-size: 28px; }
+        .subtitle { text-align: center; color: #666; margin-bottom: 30px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; max-width: 1200px; margin: 0 auto; }
+        .card { background: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-left: 4px solid #C5A44E; transition: transform 0.2s; }
+        .card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+        .card h3 { color: #00235A; margin-bottom: 8px; font-size: 16px; }
+        .card p { color: #555; font-size: 14px; line-height: 1.5; margin-bottom: 10px; }
+        .card a { color: #00235A; text-decoration: none; font-weight: 600; font-size: 13px; }
+        .card a:hover { color: #C5A44E; }
+        .badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 600; margin-left: 8px; }
+        .badge.active { background: #d4edda; color: #155724; }
+        .badge.pending { background: #fff3cd; color: #856404; }
+        .badge.free { background: #d1ecf1; color: #0c5460; }
+        .badge.paid { background: #f8d7da; color: #721c24; }
+        .category { font-size: 20px; font-weight: 700; color: #00235A; margin: 30px 0 10px 0; padding-bottom: 5px; border-bottom: 2px solid #C5A44E; max-width: 1200px; margin-left: auto; margin-right: auto; }
+        .links { display: flex; gap: 12px; flex-wrap: wrap; }
+        .cost { font-size: 12px; color: #888; margin-top: 5px; }
+    </style>
+</head>
+<body>
+    <h1>🛡️ Gullicksen Realty — Service Dashboard</h1>
+    <p class="subtitle">Managed by Warden Clawbot • Last updated: April 14, 2026</p>
+
+    <div class="category">🌐 Website & Hosting</div>
+    <div class="grid">
+        <div class="card">
+            <h3>Business Website <span class="badge active">Active</span> <span class="badge free">Free</span></h3>
+            <p>Your public-facing website — logo, tagline, listings, contact info. Hosted on GitHub Pages.</p>
+            <div class="links">
+                <a href="https://gullicksenrealty.com" target="_blank">gullicksenrealty.com</a>
+            </div>
+            <div class="cost">Host: GitHub Pages • DNS: Netlify • Domain: GoDaddy ($46.59/yr)</div>
+        </div>
+        <div class="card">
+            <h3>CRM System <span class="badge active">Active</span></h3>
+            <p>Contact management, lead tracking, email campaigns, SMS opt-out system. Running on your Mac mini.</p>
+            <div class="links">
+                <a href="http://localhost:5050" target="_blank">Local: localhost:5050</a>
+                <a href="https://gullicksen-crm.ngrok-free.app" target="_blank">Remote (ngrok)</a>
+            </div>
+            <div class="cost">1,595 contacts • Free (runs on your Mac)</div>
+        </div>
+        <div class="card">
+            <h3>GoDaddy — Domain Registrar <span class="badge active">Active</span> <span class="badge paid">$46.59/yr</span></h3>
+            <p>Domain registration for gullicksenrealty.com. DNS managed through Netlify.</p>
+            <div class="links">
+                <a href="https://dcc.godaddy.com" target="_blank">GoDaddy Dashboard</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="category">📧 Email & SMS</div>
+    <div class="grid">
+        <div class="card">
+            <h3>Zoho Mail — Email Hosting <span class="badge active">Active</span> <span class="badge paid">$15/yr</span></h3>
+            <p>Business email: mike@gullicksenrealty.com. Receive and send emails through Zoho.</p>
+            <div class="links">
+                <a href="https://mail.zoho.com" target="_blank">Zoho Mail</a>
+            </div>
+        </div>
+        <div class="card">
+            <h3>SendGrid — Email Sending <span class="badge active">Active</span> <span class="badge free">Free</span></h3>
+            <p>Transactional and campaign email sending. Free tier: 100 emails/day. Currently sending market trends email (50/day).</p>
+            <div class="links">
+                <a href="https://app.sendgrid.com" target="_blank">SendGrid Dashboard</a>
+            </div>
+            <div class="cost">Campaign: 73/1,031 sent • BCC to mike@gullicksenrealty.com</div>
+        </div>
+        <div class="card">
+            <h3>Twilio — SMS Messaging <span class="badge pending">Pending Vetting</span> <span class="badge paid">$21.50 + $2/mo</span></h3>
+            <p>A2P 10DLC registered as Sole Proprietor. Waiting for campaign approval (10-15 days). Then: text leads from CRM.</p>
+            <div class="links">
+                <a href="https://console.twilio.com" target="_blank">Twilio Console</a>
+            </div>
+            <div class="cost">Phone: (770) 525-2908 • Max 3,000 msgs/day</div>
+        </div>
+    </div>
+
+    <div class="category">📱 Social Media</div>
+    <div class="grid">
+        <div class="card">
+            <h3>Instagram & Facebook <span class="badge active">Active</span> <span class="badge free">Free</span></h3>
+            <p>@gullicksen_co_realty — Auto-posts daily at 7 AM via API. Instagram auto-shares to Facebook.</p>
+            <div class="links">
+                <a href="https://instagram.com/gullicksen_co_realty" target="_blank">Instagram</a>
+                <a href="https://business.facebook.com" target="_blank">Meta Business Suite</a>
+            </div>
+            <div class="cost">Auto-posted: Mon & Tue this week • Cron jobs set for next week too</div>
+        </div>
+        <div class="card">
+            <h3>X (Twitter) <span class="badge active">Manual</span> <span class="badge free">Free</span></h3>
+            <p>Warden creates content + graphics. Mike manually posts. Free tier.</p>
+            <div class="cost">No API — manual posting only</div>
+        </div>
+    </div>
+
+    <div class="category">🤖 AI & Automation</div>
+    <div class="grid">
+        <div class="card">
+            <h3>Warden Clawbot (OpenClaw) <span class="badge active">Active</span></h3>
+            <p>Your AI assistant — runs everything: CRM, email campaigns, social media, skip tracing, cost tracking.</p>
+            <div class="links">
+                <a href="https://docs.openclaw.ai" target="_blank">OpenClaw Docs</a>
+            </div>
+            <div class="cost">Model: xiaomi/mimo-v2-pro • Runs on your Mac mini</div>
+        </div>
+        <div class="card">
+            <h3>Telegram Bot — @Wardenmybot <span class="badge active">Active</span> <span class="badge free">Free</span></h3>
+            <p>Chat interface with Warden. Email alerts, commands, notifications.</p>
+            <div class="cost">User ID: 8620065874 • Commands: /check, /status, /reply</div>
+        </div>
+    </div>
+
+    <div class="category">🔍 Data & Skip Tracing</div>
+    <div class="grid">
+        <div class="card">
+            <h3>BatchData — Skip Tracing <span class="badge active">Active</span> <span class="badge paid">$0.12/lookup</span></h3>
+            <p>Look up property owners, phone numbers, emails. Used for lead enrichment in the CRM pipeline.</p>
+            <div class="links">
+                <a href="https://app.batchdata.com" target="_blank">BatchData Dashboard</a>
+            </div>
+            <div class="cost">API key: "Gullicksen 2 Pipeline" • Account: mike@gullicksenrealty.com</div>
+        </div>
+        <div class="card">
+            <h3>REI Skip — Backup Skip Tracing <span class="badge pending">Not Set Up</span></h3>
+            <p>Alternative to BatchData at $0.15/record. Module built but no API key yet. Available if needed.</p>
+            <div class="links">
+                <a href="https://www.reiskip.com" target="_blank">REI Skip</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="category">💰 Cost Summary</div>
+    <div class="grid">
+        <div class="card">
+            <h3>Total Spent: $429.02</h3>
+            <p>
+                • OpenRouter (AI): $79.58<br>
+                • BatchData (Skip Tracing): $248.82<br>
+                • GoDaddy (Domain): $46.59<br>
+                • Zoho Mail: $15.00<br>
+                • OpenAI (Images): $5.00<br>
+                • Twilio (SMS): $33.53<br>
+                • Netlify: Free (DNS only)
+            </p>
+            <div class="cost">Tracked in crm/costs_tracker.json + Desktop spreadsheet</div>
+        </div>
+        <div class="card">
+            <h3>Monthly Recurring</h3>
+            <p>
+                • BatchData: $43.92/month<br>
+                • Twilio: $2/month<br>
+                • Zoho: ~$1.25/month (annual)<br>
+                • GoDaddy: ~$3.88/month (annual)<br>
+                • Everything else: Free
+            </p>
+            <div class="cost">Total recurring: ~$51/month</div>
+        </div>
+    </div>
+
+</body>
+</html>
