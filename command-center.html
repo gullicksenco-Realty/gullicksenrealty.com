@@ -262,6 +262,24 @@
     padding-top: 20px;
     border-top: 1px solid #1e2a3a;
   }
+
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    body { padding: 16px; }
+    .header h1 { font-size: 1.5em; }
+    .stats-row { flex-direction: column; gap: 12px; }
+    .stat-card { min-width: auto; }
+    .org-row { flex-direction: column; align-items: center; gap: 16px; }
+    .agent-card, .agent-card.ceo, .agent-card.squads { width: 100%; max-width: 340px; }
+    .connector-h { flex-direction: column; }
+    .connector-h::before { display: none; }
+    .pipeline { flex-direction: column; gap: 8px; }
+    .pipe-arrow { transform: rotate(90deg); }
+    .pipe-step { min-width: auto; width: 100%; }
+    .models-grid { grid-template-columns: 1fr; }
+    .section-title { font-size: 1.1em; }
+    .stat-value { font-size: 1.4em !important; }
+  }
 </style>
 </head>
 <body>
