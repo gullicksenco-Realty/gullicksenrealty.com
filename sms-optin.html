@@ -56,7 +56,7 @@
 
             <div class="consent-box">
                 <label>
-                    <input type="checkbox" id="smsConsent" required>
+                    <input type="checkbox" id="smsConsent">
                     <span>I agree to receive <strong>marketing text messages</strong> from Gullicksen Realty at the phone number provided. Msg frequency varies. Msg & data rates may apply. Reply <strong>STOP</strong> to opt out at any time. Reply <strong>HELP</strong> for help. Consent is not a condition of purchase. <a href="https://gullicksenrealty.com/privacy.html">Privacy Policy</a></span>
                 </label>
             </div>
@@ -89,11 +89,6 @@
             const phone = document.getElementById('phone').value.replace(/\D/g, '');
             const consent = document.getElementById('smsConsent').checked;
             const btn = document.getElementById('submitBtn');
-
-            if (!consent) {
-                showError('Please check the SMS consent box to continue.');
-                return;
-            }
 
             if (phone.length < 10) {
                 showError('Please enter a valid 10-digit phone number.');
