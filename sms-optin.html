@@ -56,8 +56,8 @@
 
             <div class="consent-box">
                 <label>
-                    <input type="checkbox" id="smsConsent">
-                    <span>I agree to receive <strong>marketing text messages</strong> from Gullicksen Realty at the phone number provided. Msg frequency varies. Msg & data rates may apply. Reply <strong>STOP</strong> to opt out at any time. Reply <strong>HELP</strong> for help. Consent is not a condition of purchase. <a href="https://gullicksenrealty.com/privacy.html">Privacy Policy</a></span>
+                    <input type="checkbox" id="smsConsent" required>
+                    <span>I <strong>expressly consent</strong> to receive <strong>marketing and promotional text messages</strong> from Gullicksen Realty at the phone number provided. Msg frequency varies (typically 2-5 msgs/week). Msg & data rates may apply. Reply <strong>STOP</strong> to opt out at any time. Reply <strong>HELP</strong> for help. Consent is not a condition of purchase. View our <a href="https://gullicksenrealty.com/privacy.html" target="_blank">Privacy Policy</a> and <a href="https://gullicksenrealty.com/terms.html" target="_blank">Terms of Service</a>.</span>
                 </label>
             </div>
 
@@ -87,11 +87,17 @@
 
             const name = document.getElementById('name').value.trim();
             const phone = document.getElementById('phone').value.replace(/\D/g, '');
-            const consent = document.getElementById('smsConsent').checked;
             const btn = document.getElementById('submitBtn');
+
+            const consent = document.getElementById('smsConsent').checked;
 
             if (phone.length < 10) {
                 showError('Please enter a valid 10-digit phone number.');
+                return;
+            }
+
+            if (!consent) {
+                showError('You must check the consent box to receive SMS messages.');
                 return;
             }
 
@@ -102,7 +108,7 @@
                 const resp = await fetch('/api/sms-optin', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ name, phone: '+' + phone, consent: true })
+                    body: JSON.stringify({ name, phone: '+' + phone, consent: consent })
                 });
 
                 if (resp.ok) {
