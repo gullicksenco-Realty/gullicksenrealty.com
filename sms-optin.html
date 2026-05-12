@@ -56,7 +56,7 @@
 
             <div class="consent-box">
                 <label>
-                    <input type="checkbox" id="smsConsent" required>
+                    <input type="checkbox" id="smsConsent">
                     <span>I <strong>expressly consent</strong> to receive <strong>marketing and promotional text messages</strong> from Gullicksen Realty at the phone number provided. Msg frequency varies (typically 2-5 msgs/week). Msg & data rates may apply. Reply <strong>STOP</strong> to opt out at any time. Reply <strong>HELP</strong> for help. Consent is not a condition of purchase. View our <a href="https://gullicksenrealty.com/privacy.html" target="_blank">Privacy Policy</a> and <a href="https://gullicksenrealty.com/terms.html" target="_blank">Terms of Service</a>.</span>
                 </label>
             </div>
@@ -65,9 +65,8 @@
         </form>
 
         <div class="success" id="successMsg">
-            <h2>✅ You're In!</h2>
-            <p>You'll start receiving property alerts at the number you provided.<br>
-            Reply <strong>STOP</strong> anytime to unsubscribe.</p>
+            <h2>✅ Thank You!</h2>
+            <p id="successText">Your information has been received.</p>
         </div>
 
         <div class="error" id="errorMsg"></div>
@@ -96,11 +95,6 @@
                 return;
             }
 
-            if (!consent) {
-                showError('You must check the consent box to receive SMS messages.');
-                return;
-            }
-
             btn.disabled = true;
             btn.textContent = 'Signing Up...';
 
@@ -114,6 +108,11 @@
                 if (resp.ok) {
                     document.getElementById('optinForm').style.display = 'none';
                     document.getElementById('successMsg').style.display = 'block';
+                    if (consent) {
+                        document.getElementById('successText').innerHTML = 'You\'ll start receiving property alerts at the number you provided.<br>Reply <strong>STOP</strong> anytime to unsubscribe.';
+                    } else {
+                        document.getElementById('successText').textContent = 'Your information has been received. You did not opt in for SMS alerts — no messages will be sent.';
+                    }
                 } else {
                     const data = await resp.json();
                     showError(data.error || 'Something went wrong. Please try again.');
