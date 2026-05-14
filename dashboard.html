@@ -305,96 +305,75 @@
     <div class="agent-card ceo">
       <div class="agent-icon">👤</div>
       <div class="agent-name">Mike</div>
-      <div class="agent-role">CEO — Decision Maker</div>
-      <div class="agent-desc">Sets strategy, approves outreach, makes deals. Gives orders to Warden.</div>
+      <div class="agent-role">Owner — Decision Maker</div>
+      <div class="agent-desc">Sets strategy, approves outreach, makes deals, and assigns priorities to the AI team.</div>
       <div class="status-badge status-active">Active</div>
     </div>
   </div>
 
   <div class="connector"></div>
 
-  <!-- Commander -->
+  <!-- Orchestrator -->
   <div class="org-row">
     <div class="agent-card commander">
-      <div class="agent-icon">🛡️</div>
-      <div class="agent-name">Warden</div>
-      <div class="agent-role">Commander — AI Operations</div>
-      <div class="agent-desc">Orchestrates all agents, manages workflows, communicates with Mike via Telegram. The brain of the operation.</div>
+      <div class="agent-icon">🏛️</div>
+      <div class="agent-name">Hermes / OpenClaw</div>
+      <div class="agent-role">Orchestrator — Routing Layer</div>
+      <div class="agent-desc">Routes work to Ivar, Codex, or Uhtred, monitors system health, and keeps the workflow moving quietly.</div>
       <div class="status-badge status-active">Active</div>
       <div class="agent-tasks">
         <h4>Responsibilities</h4>
-        <div class="task-item"><span class="task-dot dot-green"></span>Email monitoring (Zoho → Telegram)</div>
-        <div class="task-item"><span class="task-dot dot-green"></span>SMS outreach & opt-out compliance</div>
-        <div class="task-item"><span class="task-dot dot-green"></span>Website management (Netlify)</div>
-        <div class="task-item"><span class="task-dot dot-green"></span>Agent orchestration</div>
-        <div class="task-item"><span class="task-dot dot-blue"></span>Cron scheduling</div>
+        <div class="task-item"><span class="task-dot dot-green"></span>Code and feature work → Codex</div>
+        <div class="task-item"><span class="task-dot dot-green"></span>Ops and data work → Ivar</div>
+        <div class="task-item"><span class="task-dot dot-green"></span>Review and escalation → Uhtred</div>
+        <div class="task-item"><span class="task-dot dot-blue"></span>Ambiguous tasks route to Uhtred first</div>
       </div>
     </div>
   </div>
 
   <div class="connector"></div>
 
-  <!-- Squad Leaders -->
+  <!-- 3-Agent Team -->
   <div class="org-row">
     <div class="agent-card squads">
-      <div class="agent-icon">🎯</div>
-      <div class="agent-name">Task Force Ripper</div>
-      <div class="agent-role">Lead Researcher</div>
-      <div class="agent-desc">Market intelligence, property research, trend analysis.</div>
-      <div class="status-badge status-active">Daily 8AM Scan</div>
+      <div class="agent-icon">🛡️</div>
+      <div class="agent-name">Ivar</div>
+      <div class="agent-role">Operator — Ops & Data</div>
+      <div class="agent-desc">Runs existing tools, CRM/FMLS workflows, campaigns, scheduled jobs, and data processing.</div>
+      <div class="status-badge status-active">Online — Kimi K2.6</div>
       <div class="agent-tasks">
-        <h4>Mission</h4>
-        <div class="task-item"><span class="task-dot dot-green"></span>Daily market scans</div>
-        <div class="task-item"><span class="task-dot dot-green"></span>Foreclosure tracking</div>
-        <div class="task-item"><span class="task-dot dot-yellow"></span>Expired listing scrape (pending CSV)</div>
-        <div class="task-item"><span class="task-dot dot-blue"></span>On-demand research</div>
+        <h4>Owns</h4>
+        <div class="task-item"><span class="task-dot dot-green"></span>Run existing scripts</div>
+        <div class="task-item"><span class="task-dot dot-green"></span>CRM, FMLS, and campaign execution</div>
+        <div class="task-item"><span class="task-dot dot-blue"></span>Report code bugs to Codex</div>
       </div>
     </div>
 
     <div class="agent-card squads">
-      <div class="agent-icon">🐻</div>
-      <div class="agent-name">Task Force Papa Bear</div>
-      <div class="agent-role">CRM Data Agent</div>
-      <div class="agent-desc">Database management, deduplication, skip tracing, data enrichment.</div>
-      <div class="status-badge status-ready">On-Demand</div>
+      <div class="agent-icon">💻</div>
+      <div class="agent-name">Codex</div>
+      <div class="agent-role">Builder — Code & Features</div>
+      <div class="agent-desc">Builds features, fixes code bugs, updates the Command Center app, handles integrations, and commits code.</div>
+      <div class="status-badge status-active">Online — chatgpt-cli</div>
       <div class="agent-tasks">
-        <h4>Mission</h4>
-        <div class="task-item"><span class="task-dot dot-green"></span>CRM audit complete</div>
-        <div class="task-item"><span class="task-dot dot-green"></span>255 dupes removed</div>
-        <div class="task-item"><span class="task-dot dot-green"></span>Skip tracing LIVE (BatchData API)</div>
-        <div class="task-item"><span class="task-dot dot-yellow"></span>Lead enrichment (needs MLS data)</div>
-        <div class="task-item"><span class="task-dot dot-red"></span>⚠️ Skip trace: Mike approval only</div>
+        <h4>Owns</h4>
+        <div class="task-item"><span class="task-dot dot-green"></span>New scripts and feature builds</div>
+        <div class="task-item"><span class="task-dot dot-green"></span>Desktop app and dashboard fixes</div>
+        <div class="task-item"><span class="task-dot dot-blue"></span>API integrations and migrations</div>
       </div>
     </div>
 
     <div class="agent-card squads">
-      <div class="agent-icon">📡</div>
-      <div class="agent-name">Task Force Signal</div>
-      <div class="agent-role">Social Media Agent</div>
-      <div class="agent-desc">Content creation, image generation, post scheduling, engagement.</div>
-      <div class="status-badge status-ready">Content Ready</div>
+      <div class="agent-icon">⚔️</div>
+      <div class="agent-name">Uhtred</div>
+      <div class="agent-role">Reviewer — Audit & Escalation</div>
+      <div class="agent-desc">Reviews work, monitors OpenClaw health, audits output, reports status, and escalates unclear tasks.</div>
+      <div class="status-badge status-active">Online — GPT-5.5</div>
       <div class="agent-tasks">
-        <h4>Mission</h4>
-        <div class="task-item"><span class="task-dot dot-green"></span>8 content templates built</div>
-        <div class="task-item"><span class="task-dot dot-green"></span>2-week calendar ready</div>
-        <div class="task-item"><span class="task-dot dot-green"></span>5 sample posts drafted</div>
-        <div class="task-item"><span class="task-dot dot-green"></span>Image gen LIVE (GPT Image 1)</div>
-        <div class="task-item"><span class="task-dot dot-gray"></span>Auto-posting (needs Meta API)</div>
-      </div>
-    </div>
-
-    <div class="agent-card squads">
-      <div class="agent-icon">⚙️</div>
-      <div class="agent-name">Task Force Shepherd</div>
-      <div class="agent-role">Automation Engine</div>
-      <div class="agent-desc">Chains listing discovery → tax lookup → skip trace → CRM import. Drop a CSV, get enriched leads.</div>
-      <div class="status-badge status-active">Ready — Drop CSV</div>
-      <div class="agent-tasks">
-        <h4>Pipeline Stages</h4>
-        <div class="task-item"><span class="task-dot dot-green"></span>CSV import built</div>
-        <div class="task-item"><span class="task-dot dot-green"></span>CRM import built</div>
-        <div class="task-item"><span class="task-dot dot-green"></span>County tax (Cherokee/Cobb/Gwinnett)</div>
-        <div class="task-item"><span class="task-dot dot-green"></span>BatchData skip trace LIVE</div>
+        <h4>Owns</h4>
+        <div class="task-item"><span class="task-dot dot-green"></span>Review, audit, and reporting</div>
+        <div class="task-item"><span class="task-dot dot-green"></span>Monitor Warden/OpenClaw health</div>
+        <div class="task-item"><span class="task-dot dot-blue"></span>Escalate ambiguous work</div>
       </div>
     </div>
   </div>
@@ -426,7 +405,7 @@
   <div class="pipe-step ready">
     <div class="step-icon">🐻</div>
     <div class="step-name">CRM Import</div>
-    <div class="step-agent">Papa Bear</div>
+    <div class="step-agent">Ivar</div>
   </div>
   <div class="pipe-arrow">→</div>
   <div class="pipe-step ready">
@@ -441,7 +420,7 @@
   <div class="pipe-step ready">
     <div class="step-icon">📝</div>
     <div class="step-name">Content</div>
-    <div class="step-agent">Signal</div>
+    <div class="step-agent">Ivar / Codex</div>
   </div>
   <div class="pipe-arrow">→</div>
   <div class="pipe-step ready">
