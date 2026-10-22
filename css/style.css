@@ -625,3 +625,8 @@ img { max-width: 100%; height: auto; }
   .brokerage-contact { order:3; width:100%; justify-content:center; }
   .navbar .nav-links { top:100%; }
 }
+
+/* Keep the renamed navigation wordmark within narrow phone headers. */
+@media (max-width:360px) {
+  .navbar-brand { font-size:1.1rem; }
+}

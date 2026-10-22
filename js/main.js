@@ -1,4 +1,4 @@
-// Gullicksen & Co Realty — Main JS
+// Gullicksen Realty — Main JS
 
 // Contact form handler
 function handleSubmit(e) {
